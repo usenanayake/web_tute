@@ -2,6 +2,9 @@ const express = require ('express');
 const bodyParser = require ('body-parser');
 const cors = require ('cors');
 
+const path = require ('path');
+const passport = require ('passport');
+
 const {mongoose} = require ('./db.js');
 var employeeController = require('./controllers/employeeController.js');
 var reservationController = require('./controllers/reservationController.js');
