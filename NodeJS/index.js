@@ -8,6 +8,8 @@ const passport = require ('passport');
 const {mongoose} = require ('./db.js');
 var employeeController = require('./controllers/employeeController.js');
 var reservationController = require('./controllers/reservationController.js');
+var labController = require('./controllers/labController.js');
+var loginController = require('./controllers/loginController.js');
 
 var app = express();
 app.use(bodyParser.json());
@@ -16,5 +18,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.listen(3000, () => console.log('server started at port :3000'));
 
 app.use('/employees',employeeController);
-app.use('/reservations',reservationController);   
+app.use('/reservations',reservationController);
+app.use('/labs',labController);
+app.use('/login',loginController);   
 
